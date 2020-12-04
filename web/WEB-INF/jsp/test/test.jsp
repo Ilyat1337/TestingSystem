@@ -1,16 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ilyat
-  Date: 10.10.2020
-  Time: 22:49
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
         <title>Test</title>
     </head>
     <body>
-        Test!
+        Test!<br>
+        <c:forEach var="cook" items="${cookie}">
+            <li>
+                <p><c:out value="${cook.value.name}"/></p>
+                <p><c:out value="${cook.value.value}"/></p>
+            </li>
+            Hello!
+        </c:forEach>
+
     </body>
 </html>

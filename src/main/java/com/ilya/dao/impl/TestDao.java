@@ -1,23 +1,46 @@
 package com.ilya.dao.impl;
 
+import com.ilya.dao.Creteria;
 import com.ilya.dao.Dao;
+import com.ilya.dao.connection.ConnectionProvider;
 import com.ilya.entity.Test;
 
-public class TestDao implements Dao<Test> {
+import java.util.List;
 
+public class TestDao implements Dao<Test> {
+    private final ConnectionProvider connectionProvider;
+
+    public TestDao(ConnectionProvider connectionProvider) {
+        this.connectionProvider = connectionProvider;
+    }
+
+    @Override
     public Test getById(int id) {
         return null;
     }
 
-    public void add(Test test) {
+    @Override
+    public List<Test> getAll() {
+        return null;
+    }
+
+    @Override
+    public List<Test> getByCriteria(Creteria creteria) {
+        return null;
+    }
+
+    @Override
+    public void add(Test entity) {
 
     }
 
-    public void delete(Test test) {
+    @Override
+    public void delete(Test entity) {
 
     }
 
-    public void update(Test test) {
+    @Override
+    public void update(Test entity) {
 
     }
 }
