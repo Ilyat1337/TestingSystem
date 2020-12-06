@@ -1,14 +1,14 @@
 package com.ilya.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Test extends Entity {
-    public int getId() {
-        return 0;
-    }
+    private int id;
+    private String name;
+    private int creatorId;
+    private int questionCount;
 }

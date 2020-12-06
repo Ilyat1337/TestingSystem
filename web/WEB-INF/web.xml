@@ -6,14 +6,14 @@
 
   <servlet>
     <servlet-name>TestController</servlet-name>
-    <servlet-class>com.ilya.controllers.TestController</servlet-class>
+    <servlet-class>com.ilya.controller.TestController</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>TestController</servlet-name>
-    <url-pattern>/test</url-pattern>
+    <url-pattern>/test/*</url-pattern>
   </servlet-mapping>
-  
+
   <listener>
     <listener-class>com.ilya.dao.DaoContextListener</listener-class>
   </listener>

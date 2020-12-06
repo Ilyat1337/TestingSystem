@@ -1,9 +1,9 @@
 package com.ilya.dao;
 
 import com.ilya.dao.connection.ConnectionProvider;
-import com.ilya.dao.impl.TestDao;
-import com.ilya.dao.impl.UserDao;
-import com.ilya.entity.Test;
+import com.ilya.dao.impl.SqlTestDao;
+import com.ilya.dao.impl.SqlUserDao;
+import com.ilya.dao.interfaces.TestDao;
 import com.ilya.entity.User;
 import lombok.Getter;
 
@@ -15,7 +15,7 @@ public class DaoFactory {
     private static ConnectionProvider connectionProvider;
 
     private final Dao<User> userDao;
-    private final Dao<Test> testDao;
+    private final TestDao testDao;
 
     public static void init(ConnectionProvider connectionProvider) {
         DaoFactory.connectionProvider = connectionProvider;
@@ -23,7 +23,7 @@ public class DaoFactory {
     }
 
     private DaoFactory() {
-        userDao = new UserDao(connectionProvider);
-        testDao = new TestDao(connectionProvider);
+        userDao = new SqlUserDao(connectionProvider);
+        testDao = new SqlTestDao(connectionProvider);
     }
 }

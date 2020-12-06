@@ -12,10 +12,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDao implements Dao<User> {
+public class SqlUserDao implements Dao<User> {
     private final ConnectionProvider connectionProvider;
 
-    public UserDao(ConnectionProvider connectionProvider) {
+    public SqlUserDao(ConnectionProvider connectionProvider) {
         this.connectionProvider = connectionProvider;
     }
 
